@@ -1,0 +1,38 @@
+.flex-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.nav-bar {
+  justify-content: flex-start;
+  gap: 10%;
+  padding: 10px;
+  background: #0575e6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #0575e6,
+    #021b79
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0575e6, #021b79);
+}
+
+.nav-bar a {
+  color: white;
+  text-decoration-line: none;
+}
+
+.main {
+  margin: 10px;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 400px) {
+  .nav-bar {
+    flex-direction: row;
+  }
+}
