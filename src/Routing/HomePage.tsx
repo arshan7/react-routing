@@ -1,6 +1,13 @@
-
+import React from "react";
 export const Home = () => {
-    return <div>Home Page</div>
+    const [data, setData] = React.useState(null);
+
+  React.useEffect(() => {
+    fetch("/api")
+      .then((res) => res.json())
+      .then((data) => setData(data.message));
+  }, []);
+    return <div><h1>Home Page</h1><p>{!data ? "Loading..." : data}</p></div>
 }
 
 export const SubMenu = () => {
